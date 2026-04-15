@@ -10,17 +10,17 @@
 <meta property="og:type" content="website" />
 <style>
   :root{
-    --bg:#070b18;
-    --bg-soft:#0d1428;
-    --bg-card:#111a33;
-    --line:#1f2a4a;
-    --primary:#3b82f6;
-    --primary-bright:#60a5fa;
-    --accent:#22d3ee;
-    --gold:#f5b50a;
-    --text:#eaf0ff;
-    --text-soft:#9aa7c7;
-    --green:#22c55e;
+    --bg:#ffffff;
+    --bg-soft:#f8fafc;
+    --bg-card:#ffffff;
+    --line:#e2e8f0;
+    --primary:#2563eb;
+    --primary-bright:#3b82f6;
+    --accent:#0ea5e9;
+    --gold:#ca8a04;
+    --text:#0f172a;
+    --text-soft:#475569;
+    --green:#16a34a;
     --whatsapp:#25d366;
     --radius:14px;
   }
@@ -34,7 +34,7 @@
   /* Top bar */
   header.topbar{
     position:sticky;top:0;z-index:50;
-    background:rgba(7,11,24,.85);
+    background:rgba(255,255,255,.9);
     backdrop-filter:blur(12px);
     border-bottom:1px solid var(--line);
   }
@@ -64,8 +64,8 @@
     position:relative;overflow:hidden;
     padding:90px 0 80px;
     background:
-      radial-gradient(900px 500px at 80% -10%,rgba(59,130,246,.18),transparent 60%),
-      radial-gradient(700px 400px at 10% 110%,rgba(34,211,238,.14),transparent 60%),
+      radial-gradient(900px 500px at 80% -10%,rgba(37,99,235,.08),transparent 60%),
+      radial-gradient(700px 400px at 10% 110%,rgba(14,165,233,.08),transparent 60%),
       var(--bg);
   }
   .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
@@ -97,14 +97,14 @@
   .btn-ghost:hover{border-color:var(--primary-bright);color:var(--primary-bright)}
 
   .hero-card{
-    background:linear-gradient(160deg,var(--bg-card),#0a132b);
+    background:linear-gradient(160deg,#f8fafc,#ffffff);
     border:1px solid var(--line);border-radius:20px;padding:28px;
-    box-shadow:0 30px 70px rgba(0,0,0,.45);
+    box-shadow:0 20px 40px rgba(15,23,42,.08);
   }
   .hero-card h3{font-size:14px;color:var(--text-soft);text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}
   .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:18px}
-  .stat{background:#0a1228;border:1px solid var(--line);border-radius:12px;padding:14px}
-  .stat b{display:block;font-size:24px;font-weight:800;color:var(--accent)}
+  .stat{background:#f1f5f9;border:1px solid var(--line);border-radius:12px;padding:14px}
+  .stat b{display:block;font-size:24px;font-weight:800;color:var(--primary)}
   .stat span{font-size:12px;color:var(--text-soft)}
   .hero-card ul{list-style:none;display:grid;gap:10px;margin-top:14px}
   .hero-card ul li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text-soft)}
@@ -135,7 +135,7 @@
   .pcard ul{list-style:none;display:grid;gap:6px}
   .pcard ul li{font-size:13px;color:var(--text-soft);padding-left:16px;position:relative}
   .pcard ul li::before{content:"•";color:var(--accent);position:absolute;left:0}
-  .pcard.featured{border:1px solid var(--accent);background:linear-gradient(160deg,#0e1c3e,#0a132b)}
+  .pcard.featured{border:1px solid var(--accent);background:linear-gradient(160deg,#eff6ff,#ffffff)}
   .pcard.featured::after{
     content:"DESTACADO";position:absolute;top:14px;right:14px;
     font-size:10px;letter-spacing:1.5px;color:var(--gold);font-weight:800;
@@ -154,18 +154,8 @@
   .step h4{font-size:16px;margin-bottom:6px}
   .step p{color:var(--text-soft);font-size:14px}
 
-  /* Garantía */
-  .warranty{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-  .warranty-card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
-  .warranty-card h3{font-size:20px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-  .warranty-card h3 .pill{font-size:12px;background:var(--green);color:#06122a;padding:4px 10px;border-radius:999px;font-weight:800}
-  .warranty-list{list-style:none;display:grid;gap:10px}
-  .warranty-list li{padding-left:22px;position:relative;color:var(--text-soft);font-size:14px}
-  .warranty-list li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
-  .warranty-list.bad li::before{content:"✗";color:#ef4444}
-
   /* T&C */
-  .tc-wrap{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+  .tc-wrap{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
   .tc-wrap h3{font-size:18px;margin:24px 0 10px;color:var(--primary-bright)}
   .tc-wrap h3:first-child{margin-top:0}
   .tc-wrap p,.tc-wrap li{color:var(--text-soft);font-size:14.5px;margin-bottom:8px}
@@ -174,7 +164,7 @@
   /* Contacto */
   .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
   .contact-card{
-    background:linear-gradient(160deg,var(--bg-card),#0a132b);
+    background:linear-gradient(160deg,#f8fafc,#ffffff);
     border:1px solid var(--line);border-radius:var(--radius);padding:30px;text-align:center;
     transition:border-color .2s ease,transform .2s ease;
   }
@@ -188,7 +178,7 @@
   .contact-card a.value{font-weight:700;color:var(--text);font-size:16px;display:block;margin-top:6px}
 
   /* Footer */
-  footer{padding:42px 0 30px;background:#04070f;border-top:1px solid var(--line);font-size:13px;color:var(--text-soft)}
+  footer{padding:42px 0 30px;background:#f1f5f9;border-top:1px solid var(--line);font-size:13px;color:var(--text-soft)}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:28px}
   .foot-grid h5{color:var(--text);font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
   .foot-grid a{color:var(--text-soft)}
@@ -210,7 +200,6 @@
   @media (max-width:880px){
     .hero{padding:60px 0}
     .hero-grid{grid-template-columns:1fr;gap:36px}
-    .warranty{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr;gap:22px}
     nav.topnav{display:none}
     .topnav-cta{display:none}
@@ -234,7 +223,6 @@
     <nav class="topnav">
       <a href="#productos">Productos</a>
       <a href="#financiamiento">Financiamiento</a>
-      <a href="#garantia">Garantía</a>
       <a href="#terminos">Términos</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -262,14 +250,13 @@
       <h3>¿Por qué United Smart Tech?</h3>
       <div class="stats">
         <div class="stat"><b>SD & PC</b><span>Cobertura Santo Domingo y Punta Cana</span></div>
-        <div class="stat"><b>45 días</b><span>Garantía directa</span></div>
+        <div class="stat"><b>NCF</b><span>Facturación fiscal formal</span></div>
         <div class="stat"><b>0%</b><span>Interés en financiamiento corporativo</span></div>
         <div class="stat"><b>24/7</b><span>Atención por WhatsApp</span></div>
       </div>
       <ul>
         <li>Pago descontado directo de la nómina del colaborador</li>
         <li>Catálogo amplio: iPhones, accesorios, vapes, electrónica</li>
-        <li>Garantía formal con políticas claras (45 días)</li>
         <li>Aliados activos: United Petroleum, CCS, Food Management Services</li>
         <li>Atención directa por WhatsApp a cualquier hora</li>
       </ul>
@@ -393,48 +380,13 @@
   </div>
 </section>
 
-<!-- GARANTÍA -->
-<section id="garantia">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Respaldo</div>
-      <h2>Garantía United Mobile</h2>
-      <p>45 días de garantía directa con UST en todos los equipos. Algunos productos incluyen garantía adicional con el fabricante.</p>
-    </div>
-    <div class="warranty">
-      <div class="warranty-card">
-        <h3>Cubre <span class="pill">SÍ APLICA</span></h3>
-        <ul class="warranty-list">
-          <li>Defectos de fabricación debidamente comprobados</li>
-          <li>Reparación o sustitución gratuita en nuestro Servicio Técnico</li>
-          <li>Cambio por equipo de igual valor (o pagando la diferencia)</li>
-          <li>Cumplimiento dentro de los 30 días de recibido el pedido</li>
-          <li>Aplicable presentando el certificado de garantía firmado</li>
-        </ul>
-      </div>
-      <div class="warranty-card">
-        <h3>No cubre <span class="pill" style="background:#ef4444;color:#fff">EXCLUSIONES</span></h3>
-        <ul class="warranty-list bad">
-          <li>Humedad, caída, alto voltaje o cortocircuito</li>
-          <li>Pantalla rota, touch dañado o maltrato físico</li>
-          <li>Cambio de software o problemas de imagen por uso</li>
-          <li>Equipos abiertos o desarmados por terceros</li>
-          <li>Pérdida o robo del equipo</li>
-          <li>Devoluciones en efectivo (solo crédito por otro equipo)</li>
-          <li>Equipos apagados al momento de revisión</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TÉRMINOS Y CONDICIONES -->
 <section id="terminos">
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Marco legal</div>
       <h2>Términos y Condiciones</h2>
-      <p>Versión resumida basada en las políticas oficiales de financiamiento corporativo y garantía de United Smart Tech Mobile S.R.L.</p>
+      <p>Versión resumida basada en las políticas oficiales de financiamiento corporativo de United Smart Tech Mobile S.R.L.</p>
     </div>
     <div class="tc-wrap">
       <h3>1. Identificación de la empresa</h3>
@@ -472,26 +424,13 @@
         <li>UST podrá proceder a la recuperación del equipo o ejercer las acciones legales correspondientes.</li>
       </ul>
 
-      <h3>6. Garantía de productos</h3>
-      <ul>
-        <li>Todos los productos cuentan con 45 días de garantía directa con United Mobile (algunos con garantía extendida del fabricante).</li>
-        <li>Para hacer efectiva la garantía es indispensable presentar el Certificado de Garantía firmado y el equipo con sellos intactos.</li>
-        <li>Las devoluciones se realizan únicamente como crédito por otro equipo del mismo valor (o por uno de mayor precio pagando la diferencia).</li>
-        <li>No se realizan devoluciones en efectivo bajo ninguna circunstancia.</li>
-        <li>Plazo máximo de cumplimiento de reparación: 30 días desde la recepción del equipo.</li>
-        <li>La garantía caduca automáticamente si el equipo es desarmado por terceros.</li>
-      </ul>
+      <h3>6. Aceptación</h3>
+      <p>La firma del Formulario de Solicitud y Autorización de Descuento por Nómina o cualquier compra realizada al amparo de las políticas de United Smart Tech Mobile S.R.L. implican el conocimiento íntegro y la aceptación expresa de los presentes términos.</p>
 
-      <h3>7. Exclusiones de garantía</h3>
-      <p>La garantía no cubre humedad, caídas, alto voltaje, cortocircuito, pantalla rota, touch dañado, cambio de software, problemas de imagen, accesorios averiados, maltratos físicos, ni casos de pérdida o robo. No se reciben equipos apagados.</p>
-
-      <h3>8. Aceptación</h3>
-      <p>La firma del Formulario de Solicitud y Autorización de Descuento por Nómina, la firma del Certificado de Garantía o cualquier compra realizada al amparo de las políticas de United Smart Tech Mobile S.R.L. implican el conocimiento íntegro y la aceptación expresa de los presentes términos.</p>
-
-      <h3>9. Modificaciones</h3>
+      <h3>7. Modificaciones</h3>
       <p>Cualquier modificación, actualización o derogación de estas políticas debe realizarse por escrito y contar con la aprobación expresa de la Gerencia General de UNITED SMART TECH MOBILE S.R.L.</p>
 
-      <h3>10. Contacto y reclamos</h3>
+      <h3>8. Contacto y reclamos</h3>
       <p>Cualquier consulta, reclamo o solicitud bajo estos términos puede dirigirse al correo <a href="mailto:unitedsmarttech@gmail.com">unitedsmarttech@gmail.com</a> o al WhatsApp oficial <a href="https://wa.me/18293851245" target="_blank" rel="noopener">+1 (829) 385-1245</a>.</p>
     </div>
   </div>
@@ -555,7 +494,6 @@
         <h5>Navega</h5>
         <p><a href="#productos">Productos</a></p>
         <p><a href="#financiamiento">Financiamiento</a></p>
-        <p><a href="#garantia">Garantía</a></p>
         <p><a href="#terminos">Términos</a></p>
       </div>
       <div>
